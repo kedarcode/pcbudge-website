@@ -1,0 +1,96 @@
+
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: white !important;
+		}
+		.user_card {	
+            margin:auto;
+            margin-top:3rem;
+			background:white;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+
+		.brand_logo {
+			height: 6rem;
+			width: 12rem;
+		}
+		.form_container {
+			margin-top: 1em;
+		}
+.input-group{
+    width:auto;
+    
+}
+.login_container{
+    align-content:center;
+    margin-left: 5rem;
+    width:10rem;
+}
+.input-group{
+    border: none;
+    border-radius:0.1rem;
+}
+input{
+	border:0.01rem solid black;
+}
+.form-control .input-user{
+	border:0.1rem solid black;
+
+}
+		.login_btn {
+			width: 100%;
+			background: rgb(0, 183, 255) !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.btn:hover{
+			background: rgba(0, 97, 189, 0.774) !important;
+		}
+		.login_container {
+			padding: 0 1rem;
+		}
+		.input-group-text {
+			background: #c0392b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: #c0392b !important;
+		}
+.label{
+    padding-bottom: 0.1rem;
+}
+.btn-container{
+    padding-top: 2rem;
+}
+.links{
+    padding-bottom: 1rem;
+}
+
+@keyframes animate{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.7;
+	}
+	100%{
+		opacity: 0;
+	}
+}

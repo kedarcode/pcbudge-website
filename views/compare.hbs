@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        compare
+    </title>  
+    <link rel="icon" href="/images/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=" initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/compare.css">
+        <link rel="stylesheet" type="text/css" href="/css/common_list.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/google_ad.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4543680276633818"
+     crossorigin="anonymous"></script>
+    <title></title>
+</head>
+
+<body >
+     <div id="yopage_loader">
+        <div class = 'bm_container'>
+        <div id='bm'></div>
+        </div>
+    </div>
+    <div id="body_full"></div>
+    <div id="navbar">
+    {{>navbar}}</div>
+    <div id="secnavbar">
+        {{>second_navbar}}
+     </div>
+     <div class = 'container-fluid-no-padding p-1' id='compare_content'>
+         <div id='products_name' class="prows row">
+             <div class='pname_header header' class="col-12">
+             <h1 >Compare Legend</h1>
+             </div>
+             <div class="col-md-12 table">
+                <table id = "pname_true">
+                    <thead>
+                        <th class = 'pn' scope="col">Product Name</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Delete</th>
+                    </thead>
+                </table>
+             </div>
+         </div>
+    <div class="compare_data prows row">   
+    </div>   
+     </div>
+     <div id="footer">
+    {{>footer}}</div>
+    <script src="/javascript/compare.js"></script>
+        <script src="/javascript/util.js"></script>
+
+
+</body>
+</html>

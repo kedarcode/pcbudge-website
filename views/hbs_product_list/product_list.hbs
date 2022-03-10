@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/images/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascript/multi_range_slider.js"></script>
+    <meta name="viewport" content=" initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/product_list.css">
+         <link rel="stylesheet" type="text/css" href="/css/common_list.css">
+
+    <title>list-of-motherboard</title>
+</head>
+<body>
+    <div id="navbar">
+        {{>navbar}}
+    </div>
+     <div id="secnavbar">
+        {{>second_navbar}}
+     </div>
+    <div id="page_loader">
+        <div class = 'bm_container'>
+        <div id='bm'></div>
+        </div>
+    </div>
+    <div id="product_type" style="display:None;">{{product_type}}</div>
+    <div class="container">       
+        <div class="side_content row">
+            <div style="position:fixed;right:0;height:100vh;z-index:15;margin-top:25rem;"id="color_control">
+                {{>theme_control}}
+            </div>
+            <div class="col-2 filter" id="filter">
+                {{#ifeq product_type "motherboard"}}
+                    <div class="col-2 filter-attr sa_scroll" id ="filter_attr">
+                        
+                        <div class="attr">
+                            <label for="Brand">
+                                Brand
+                            </label>
+                            <select  onchange="filterA(this.id)" class="dp sa_scroll" name="brand"  id="brand-dp">
+                                <option selected="selected">---all---</option>
+                            </select>
+                        </div>
+                        
+                        <div class="attr">
+                            <label for="socket">
+                                Socket
+                            </label>
+                            <select  onchange="filterA(this.id)" class="dp sa_scroll" name="socket"  id="socket-dp">
+                                <option selected="selected">---all---</option>
+                            </select>
+                        </div>
+                        <label style="text-align:center;font-size: 0.9rem;width:100%;">or</label>
+
+                        <div class="attr">
+                             <label style="font-size: 0.9rem;"for="processor">Inbuild processor</label>
+                             <select  onchange="filterA(this.id)" class="dp sa_scroll" name="processor"  id="socket-procdp">
+                                 <option selected="selected">---all---</option>
+                             </select>
+                        </div>
+                        <hr style="width:90%;border-top:0.1rem solid black;" class="rounded">
+
+                        <div class="attr">
+                            <label for="chipset">Chipset</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="chipset"  id="chipset-dp">
+                                <option selected="selected">---all---</option>
+                            </select>
+                         </div>
+
+                        <div class="attr">
+                            <label style="font-size: 0.9rem;"for="northbridge">Northbridge</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="northbridge"  id="chipset-nbdp">
+                            <option selected="selected">---all---</option>
+                            </select>
+                        </div>
+
+                        <div class="attr">
+                            <label style="font-size: 0.9rem;"for="southbridge">Southbridge</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="southbridge"  id="chipset-sbdp">
+                                <option selected="selected">---all---</option>
+                            </select>
+                        </div>
+
+                        <hr style="width:90%;border-top:0.1rem solid black;" class="rounded">
+
+                        <div class="attr" >
+                            <label >Max RAM</label>
+                            <br>
+                            <label  style="font-size: 1rem" id="something0">loading...</label>
+                            <label  style="font-size: 1rem;float:right"  id="something20">...</label>
+                            <div style= "width: 100%" class="middle" >
+                                <div style= "width: 100%"class="multi-slider" min="1" max="256" id="RAM_max-range" >
+                                    <div class="slider" id="slider0"></div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="attr">
+                            <label style="font-size: 0.9rem;"for="ddr">DDR</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="ddr"  id="RAM_DDR-dp">
+                                <option selected="selected">---all---</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+
+                        <div class="attr" >
+                            <label >RAM slots</label>
+                            <br>
+                            <label style="font-size: 1rem" id="something1">loading...</label>
+                            <label style="font-size: 1rem;float:right"  id="something21">...</label>
+                            <div style= "width: 100%" class="middle">
+                                <div style= "width: 100%"class="multi-slider" min="1" max="8" id="RAM_slots-range" >
+                                    <div class="slider" id="slider1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attr" >
+                            <label >SATA slots</label>
+                            <br>
+                            <label style="font-size: 1rem" id="something2">loading...</label>
+                            <label style="font-size: 1rem;float:right"  id="something22"></label>
+                            <div style= "width: 100%" class="middle">
+                                <div style= "width: 100%"class="multi-slider" min="1" max="10" id="SATA_count-range">
+                                    <div class="slider" id="slider2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attr">
+                            <label for="m2slots">M2 slots</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="m2slots"  id="M2_slots-dp">
+                                <option selected="selected">---all---</option>
+                                <option >1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+
+                        <div class="attr">
+                            <label for="mb_size">Motherboard size</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="mb_size"  id="mb_size-dp">
+                                <option selected="selected">---all---</option>
+                            </select>
+                        </div>
+
+                        <div class="attr">
+                            <label for="bluetooth">Bluetooth</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="bluetooth"  id="bluetooth-dp">
+                                <option selected="selected">---all---</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                        <div class="attr">
+                            <label for="wifi">WI-FI</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="wifi"  id="wifi-dp">
+                                <option selected="selected">---all---</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+
+                    </div>
+                 {{/ifeq}}
+            </div>
+            <div class="col-10 content" id="content">
+                <div style="text-align: left;margin-top:8rem;margin-left:2rem;">
+                <label style="color:white;font-size:1rem;opacity:0.5;" id="product_count"></label>
+            </div>
+    <div class="prod_show grid_layout">     
+    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer" style="z-index: 99 ;">
+        {{>footer}}
+    </div>
+        <script src="/javascript/common.js"></script>
+        <script src="/javascript/list_product/combined.js"></script>
+    <script src="/javascript/list_product/product_list.js"></script>
+</body>
+</html>

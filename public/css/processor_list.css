@@ -1,0 +1,116 @@
+
+@import "style.css";
+
+.list_layout{
+    margin-left: 2rem;
+}
+.preview_p{
+    margin: 0.2rem;
+    border-radius:10% 10% 4% 4%;
+}
+.card_p{
+    margin-left: 0;
+    text-align: center;
+    margin: auto;
+    width:15rem;
+    background: rgb(20, 20, 20);
+    border-radius:10% 10% 4% 4%;
+    transition-duration: 0.4s;
+}
+.lis_tab_data{
+    color:var(--c2);
+    float: left;
+    text-align: left;
+    background-color: var(--db);
+    padding:0.5rem;
+    width: 40%;
+    margin-left: 1rem;
+    border-radius: 0.2rem;
+}
+.lis_prod_name{
+    font-size: 1.5rem;
+    padding:0.2rem;
+    color:var(--c1);
+    background-color: var(--g1);
+    border-radius: 0.5rem;;
+}
+.prods:hover{
+    border:0.15rem solid var(--c2);
+    transform: scale(1.02);
+    transition-duration: 0.4s;
+}
+.dp{
+    width:100%;
+    margin-top:0rem;
+    background-color:#222222; 
+    color: white;
+    border-radius: 0.3rem;
+}
+.out{
+    min-height:15rem;
+    background-color: rgb(20, 20, 20);
+    border-radius:1rem;
+}
+.brief_p{
+    display: flexbox;
+    background: rgb(20, 20, 20);
+    text-align: center;
+    padding:0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 1rem;
+}
+.brief_p>h1{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    padding:0.3rem;
+    font-size: 0.8rem;
+}
+.brief_p>li{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    padding:0.3rem;
+    font-size: 0.8rem;
+}
+.head_pro{
+    margin-bottom: 0.2rem;
+}
+.middle {
+	position: relative;
+	width: 50%;
+	max-width: 500px;
+}
+.list_image{
+    left: 50%;
+    border-radius: 0.2rem;
+
+    top: 50%;
+    max-height: 10rem;
+    width: 100%;
+    height: 100%;
+}
+.product_row{
+    left: 50%;
+    margin:auto;
+    padding:0.2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--c1);
+   
+}
+.lis_image{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+.ran_lab{
+    font-size: 2rem;
+}
+#product_count{
+    background-color: var(--c1);
+    border:0.2rem solid var(--b1);
+    border-radius: 1rem;
+    padding :1rem;
+    width:100%;
+}
+

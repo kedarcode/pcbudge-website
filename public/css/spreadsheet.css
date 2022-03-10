@@ -1,0 +1,37 @@
+.loader{
+    position: fixed;
+    z-index :99;
+    top :0;
+    left:0;
+    height: 100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#002117;
+}
+.loader > img{
+     position: fixed;
+    width:400px;
+    height:400px;
+    border-color:#002117;
+    display:flex;
+  
+}
+.loader.hidden{
+    animation:fadeOut 1s;
+     animation-fill-mode:forwards;
+}
+@keyframes fadeOut{
+    100%{
+        opacity:0;
+        visibility: hidden;
+    }
+}
+body{
+    background: white;
+}
+#home-lo{
+    padding-top: 3rem;
+    width:100%;
+}

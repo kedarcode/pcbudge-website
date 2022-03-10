@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/images/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/javascript/multi_range_slider.js"></script>
+    <meta name="viewport" content=" initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/product_list.css">
+         <link rel="stylesheet" type="text/css" href="/css/common_list.css">
+
+    <title>pcbudge-graphic-card</title>
+</head>
+<body>
+    <div id="navbar">
+        {{>navbar}}
+    </div>
+     <div id="secnavbar">
+        {{>second_navbar}}
+     </div>
+    <div id="page_loader">
+        <div class = 'bm_container'>
+        <div id='bm'></div>
+        </div>
+    </div>
+    <div id="product_type" style="display:None;">{{product_type}}</div>
+    <div class="container">       
+        <div class="side_content row">
+            <div class="col-2 filter" id="filter">
+                {{#ifeq product_type "graphic_card"}}
+                    <div class="col-2 filter-attr sa_scroll" id ="filter_attr">
+                        
+                        <div class="attr">
+                            <label for="brand">
+                                Brand
+                            </label>
+                            <select  onchange="filterA(this.id)" class="dp sa_scroll" name="brand"  id="brand-dp">
+                                <option selected="selected">---all---</option>
+                            </select>
+                        </div>
+                        
+                        <div class="attr">
+                            <label for="memory_inteface">memory Interface</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="memory_interface"  id="memory_interface-dpin">
+                                <option selected="selected">---all---</option>
+                            </select>
+                        </div>
+
+                        <div class="attr" >
+                            <label >CUDA Cores</label>
+                            <br>
+                            <label  style="font-size: 1rem" id="something0">loading..</label>
+                            <label  style="font-size: 1rem;float:right"  id="something20"></label>
+                            <div style= "width: 100%" class="middle" >
+                                <div style= "width: 100%"class="multi-slider" min="1" max="10496" id="core-range" >
+                                    <div class="slider" id="slider0"></div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="attr">
+                            <label style="font-size: 0.9rem;"for="bus_standard">Bus Standard</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="bus_standard"  id="bus_standard-dpin">
+                                <option selected="selected">---all---</option>
+                                <option>PCI-E</option>
+                                <option>2.0</option>
+                                <option>3.0</option>
+                                <option>4.0</option>
+                            </select>
+                        </div>
+
+                        <div class="attr" >
+                            <label >video memory(GB)</label>
+                            <br>
+                            <label style="font-size: 1rem" id="something1">loading..</label>
+                            <label style="font-size: 1rem;float:right"  id="something21">..</label>
+                            <div style= "width: 100%" class="middle">
+                                <div style= "width: 100%"class="multi-slider" min="1" max="24" id="video_memory_gb-range" >
+                                    <div class="slider" id="slider1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attr" >
+                            <label >Display Support</label>
+                            <br>
+                            <label style="font-size: 1rem" id="something2">loading..</label>
+                            <label style="font-size: 1rem;float:right"  id="something22"></label>
+                            <div style= "width: 100%" class="middle">
+                                <div style= "width: 100%"class="multi-slider" min="1" max="6" id="display_support-range">
+                                    <div class="slider" id="slider2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="attr">
+                            <label for="crossfire">Crossfire</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="crossfire"  id="crossfire-dpbool">
+                                <option selected="selected">---all---</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                               
+                            </select>
+                        </div>
+                        <div class="attr las_filter ">
+                            <label for="resolution">Max Resolution</label>
+                            <select onchange="filterA(this.id)" class="dp sa_scroll" name="resolution"  id="resolution-dpin">
+                                <option selected="selected">---all---</option>
+                                <option>7680 x 4320</option>
+                                <option>5120 x 2880</option>
+                                <option>4096 x 2160</option>                               
+                                <option>3840 x 2160</option>
+                                <option>2560 x 1600</option>
+                                <option>2048 x 1536</option>
+                                <option>1920 x 1200</option>
+                            </select>
+                        </div>                
+
+                    </div>
+                 {{/ifeq}}
+            </div>
+            <div class="col-10 content" id="content">
+                <div style="text-align: left;margin-top:8rem;margin-left:2rem;">
+                <label style="color:white;font-size:1rem;opacity:0.5;" id="product_count"></label>
+            </div>
+    <div class="prod_show grid_layout">     
+    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer" style="z-index: 99 ;">
+        {{>footer}}
+    </div>
+    <script src="/javascript/common.js"></script>
+    <script src="/javascript/list_product/combined.js"></script>
+        <script src="/javascript/list_product/product_list.js"></script>
+
+</body>
+</html>

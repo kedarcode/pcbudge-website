@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Lobster&family=Sedgwick+Ave&family=Supermercado+One&display=swap");
+.name {
+    margin-top: auto;
+    color: rgb(0, 0, 0);
+    font-family: "Inter", sans-serif;
+    font-family: "Sedgwick Ave", cursive;
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    height: 4rem;
+}
+
+.nav-ul {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+nav li {
+    justify-content: flex-end;
+    font-family: "Supermercado One", cursive;
+    font-size: 1rem;
+    display: inline;
+}
+
+@media (max-width: 1200px) {
+    .name {
+        font-size: 1.5rem;
+    }
+}

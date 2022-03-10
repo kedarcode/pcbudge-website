@@ -1,0 +1,81 @@
+
+@import "style.css";
+
+.list_layout{
+    margin-left: 2rem;
+}
+
+#product_count{
+    background-color: var(--c1);
+    border:0.2rem solid var(--b1);
+    border-radius: 1rem;
+    padding :1rem;
+    width:100%;
+}
+
+.lis_tab_data{
+    color:var(--c2);
+    float: left;
+    text-align: left;
+    background-color: var(--db);
+    padding:0.5rem;
+    width: 40%;
+    margin-left: 1rem;
+    border-radius: 0.2rem;
+}
+.lis_prod_name{
+    font-size: 100%;
+    padding:0.5rem;
+    color:var(--c1);
+    background-color: var(--g1);
+    border-radius: 0.5rem;
+}
+.wrap_ni:hover{
+    background-color: var(--c3);
+}
+.prods:hover{
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+
+ .card> img {
+     padding:1rem;
+     border-radius:2rem;
+width:15rem;
+height: 11rem;
+}
+
+.middle {
+	position: relative;
+	width: 50%;
+	max-width: 500px;
+}
+.list_image{
+    left: 50%;
+    border-radius: 0.2rem;
+
+    top: 50%;
+    max-height: 10rem;
+    width: 100%;
+    height: 100%;
+}
+
+.lis_image{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+  #product_table tr{background-color: var(--db);color:var(--c3);}
+  
+  #product_table tr:hover {background-color:var(--g2);color:var(--c1);}
+  #product_table tr:hover:nth-child(even) {color:var(--c1);background-color:var(--g1)}
+
+  #product_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:var(--c1);
+    color: white;
+  }
+

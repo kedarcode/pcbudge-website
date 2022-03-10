@@ -1,0 +1,116 @@
+
+@import "style.css";
+
+.list_layout{
+    margin-left: 2rem;
+}
+
+#product_count{
+    background-color: var(--c1);
+    border:0.2rem solid var(--b1);
+    border-radius: 1rem;
+    padding :1rem;
+    width:100%;
+}
+.card{
+    margin-left: 0;
+    text-align: center;
+    margin: auto;
+    width:15rem;
+    background: rgb(20, 20, 20);
+    border-radius:10% 10% 4% 4%;
+    transition-duration: 0.4s;
+}
+.pro_preview{
+  margin: 0.2rem;
+  border-radius:10% 10% 4% 4%;
+}
+.pro_card{
+  margin-left: 0;
+  text-align: center;
+  margin: auto;
+  width:15rem;
+  background: rgb(20, 20, 20);
+  border-radius:10% 10% 4% 4%;
+  transition-duration: 0.4s;
+}
+.prods:hover{
+    border:0.15rem solid var(--c2);
+    transform: scale(1.02);
+    transition-duration: 0.4s;
+}
+.dp{
+    width:100%;
+    margin-top:0rem;
+    background-color:#222222; 
+    color: white;
+    border-radius: 0.3rem;
+}
+
+ .card> img {
+     padding:1rem;
+     border-radius:2rem;
+width:15rem;
+height: 11rem;
+}
+.container{
+  margin: auto;
+}
+.out{
+    background-color: rgb(20, 20, 20);
+    border-radius:10% 10% 4% 4%;
+}
+.mb_brief{
+    display: flexbox;
+    background: rgb(20, 20, 20);
+    text-align: center;
+    padding:0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0% 0% 10% 10%;
+}
+.mb_brief>h1{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    padding:0.3rem;
+    font-size: 0.8rem;
+}
+.pro_brief{
+  display: flexbox;
+  background: rgb(20, 20, 20);
+  text-align: center;
+  padding:0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 1rem;
+}
+.pro_brief>h1{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  padding:0.3rem;
+  font-size: 0.8rem;
+}
+.pro_out{
+  min-height:15rem;
+  background-color: rgb(20, 20, 20);
+  border-radius:1rem;
+}
+.head_pro{
+  margin-bottom: 0.2rem;
+}
+
+.middle {
+	position: relative;
+	width: 50%;
+	max-width: 500px;
+}
+.product_row{
+    left: 50%;
+    margin:auto;
+    padding:1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--c1);
+   
+}
+

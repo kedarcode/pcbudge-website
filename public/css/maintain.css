@@ -1,0 +1,31 @@
+#const{
+    width: 100%;
+    height: 100%;
+}
+.const_cont{
+    margin: auto;
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 1;}
+
+h1{
+    margin: auto;
+    font-family: "Copperplate", Fantasy, serif;
+    padding-top: 4srem;
+    font-size:5rem;
+    text-align: center;
+    color: #1f2833;
+    z-index: 12;
+}
+.bg_im{
+    left: 0;
+    top:0;
+    z-index: -100;
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient( #befff3,#47777c);
+}

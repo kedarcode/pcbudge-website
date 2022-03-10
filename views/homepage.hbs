@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="utf=8">
+    <meta name="viewport" content="initial-scale=1.0">
+        <link rel="icon" href="/images/icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>
+        Pcbudge
+    </title>   
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+
+    
+</head>
+<body>
+    <div id="navbar">
+    {{>navbar}}  </div>
+    <div  class="container hardware" >
+        <main class="grid">
+            {{#each cards}}
+            <div id="mb">
+             <div class="card logca">
+                    <div class="text">
+                    <h1>{{this.head}}</h1>
+                    </div>
+                    <img id="plog" src = "{{this.logo}}"/>
+                </div>
+            <div class ="card picheka">
+                <div id = "picheka_info">
+                    <div id="picheka_data">
+                <a style="font-size: 1rem;" id="prod_count">{{this.count}} products </a><br>
+                <label><a id="prod_text" onclick="givecall('{{this.req_type}}')">view all</a></label>
+                <span class="tooltiptext">{{this.count}} {{this.head}} details,<br>click to view them all.</span>
+                </div>
+                </div>
+<br>
+               </div>               
+          </div>
+          {{/each}}
+         
+        </main>
+ 
+     
+    </div>
+
+     <div style="position:fixed;right:0;height:100vh;z-index:15;"id="color_control">
+              {{>theme_control}}
+          </div>
+    <div id="footer" >
+    {{>footer}}</div>
+        <script src="/javascript/homepage.js"></script>
+
+</body>
+
+</html>

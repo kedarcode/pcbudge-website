@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="icon" href="/images/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=" initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/product.css">
+        <link rel="stylesheet" type="text/css" href="/css/google_ad.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4543680276633818"
+     crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body >
+    <div id="body_full"></div>
+    <div id="navbar">
+    {{>navbar}}</div>
+    <div id="secnavbar">
+        {{>second_navbar}}
+     </div>
+        <div id="{{prod_uid}}" name="{{product_type}}" class="uid" "visibility:hidden;"> </div>
+            <div  class = "container-fluid p-0 no-padding">
+            <div  class="row prod_body">
+                <div  class="col-md-12">
+                <div class="container-fluid no-padding prod_all">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 id="prod_name"></h1>
+                        </div>
+                    </div>
+                    <div id="image_detail" class="row align-items-start image_detail">
+                        <div class="col-lg-2 col-md-2 img_list">
+                            </div>
+                        <div class="col-lg-6 col-md-6 img_container">
+                            <div class="row image">
+                                <div id="big_size" class="col-12 ">
+                                    <img id="slide_show" src="/images/fi.gif" onerror='this.src="/public/images/loader_image.mp4' >
+                                    </div></div>
+                            </div>
+                        <div class="col-lg-4 col-md-4 detail">
+                            <table id ='detail_tab' class="table">
+                            
+                            </table>
+                        </div>
+                    </div>
+                    <div id='comp_parent' class="row justify-content-around">
+                    </div>
+                    <div class="row">
+                    {{>spec_single}}
+                    </div>
+                    <div class="row more_details">
+                        <div id="product_page" class="col-md-4 link_button">
+                        <h1 "width: 100%;"> More Details</h1>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+    </div>
+    <div id="footer">
+    {{>footer}}</div>
+            <script src="/javascript/util.js"></script>
+    <script src="/javascript/single_product/common_single.js"></script>
+    <script src="/javascript/single_product/product.js"></script>
+
+</body>
+</html>
